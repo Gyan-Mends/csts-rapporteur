@@ -1,7 +1,8 @@
 import { Outlet } from "react-router";
 import Navigation from "~/components/navigation";
 import { Link } from "react-router";
-import { Mail, Phone, MapPin, FileText, Users, Shield } from "lucide-react";
+import { Mail, Phone, MapPin, FileText, Users, Shield, Facebook, X, Instagram, Linkedin, Youtube } from "lucide-react";
+import logo from "~/components/images/CSTS Logo.png";
 
 export default function AppLayout() {
     return (
@@ -19,27 +20,28 @@ export default function AppLayout() {
                             {/* About CSTS */}
                             <div className="lg:col-span-2">
                                 <div className="mb-6">
-                                    <div className="flex items-center space-x-2">
-                                        <span className="text-2xl font-bold text-white">CSTS</span>
-                                        <span className="text-lg ">Rapporteur</span>
-                                    </div>
+                                  <img src={logo} alt="CSTS" className=" h-10" />
                                 </div>
                                 <p className=" leading-relaxed mb-6 max-w-md">
                                     Corporate Secretarial and Training Services Limited provides exceptional rapporteur services 
                                     with flexibility, impartiality, and credible analytical skills for your formal events.
                                 </p>
                                 <div className="flex space-x-4">
-                                    <a href="mailto:info@csts.com" className="w-10 h-10 csts-bg-primary rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                                        <Mail className="w-5 h-5 text-white" />
+                                    <a href="https://web.facebook.com/cstsghana/about" className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                                        <Facebook className="w-5 h-5 text-white" />
                                     </a>
-                                    <a href="tel:+233123456789" className="w-10 h-10 csts-bg-secondary rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                                        <Phone className="w-5 h-5 text-white" />
+                                    <a href="https://x.com/cstsgh" className="w-10 h-10 csts-bg-secondary rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                                        <X className="w-5 h-5 text-white" />
                                     </a>
-                                    <a href="#" className="w-10 h-10 csts-bg-accent rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                                        <span className="text-white text-lg">📘</span>
+                                    <a href="https://www.instagram.com/cstsghana" className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                                        <Instagram className="text-white text-lg" />
                                     </a>
-                                    <a href="#" className="w-10 h-10 csts-bg-primary rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
-                                        <span className="text-white text-lg">🐦</span>
+                                    <a href="https://www.linkedin.com/in/csts-ghana-398975174/" className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                                        <Linkedin className="text-white text-lg" />
+                                    </a>
+                                    {/* youtube */}
+                                    <a href="https://www.youtube.com/@cstsghana6166" className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
+                                        <Youtube className="text-white text-lg" />
                                     </a>
                                 </div>
                             </div>
@@ -79,18 +81,18 @@ export default function AppLayout() {
                                     <div className="space-y-3 ">
                                         <p className="flex items-center gap-3">
                                             <MapPin className="w-5 h-5 text-pink-500" />
-                                            <span>Accra, Ghana</span>
+                                            <span>15 Netflix Street UPSA Road, Madina, Accra</span>
                                         </p>
                                         <p className="flex items-center gap-3">
                                             <Mail className="w-5 h-5 text-pink-500" />
                                             <a href="mailto:info@csts.com" className="hover:text-pink-400 transition-colors">
-                                                info@csts.com
+                                            info@cstghana.com
                                             </a>
                                         </p>
                                         <p className="flex items-center gap-3">
                                             <Phone className="w-5 h-5 text-pink-500" />
                                             <a href="tel:+233123456789" className="hover:text-pink-400 transition-colors">
-                                                +233 (0) 123 456 789
+                                            +233 20 110 8331 / +233 50 632 5541 
                                             </a>
                                         </p>
                                     </div>

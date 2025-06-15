@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, type MetaFunction } from 'react-router';
 import { Calendar, MapPin, Users, FileText, Building, Globe } from 'lucide-react';
+import backgroundVideo from '~/components/images/large1.mp4';
 
 export const meta: MetaFunction = () => {
     return [
@@ -147,7 +148,7 @@ const OurWork = () => {
             <section className="py-20 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
+                        <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-800 mb-6">
                             Trusted by Leading Organizations
                         </h2>
                         <p className="text-lg lg:text-xl leading-relaxed text-gray-700 mb-8">
@@ -164,7 +165,7 @@ const OurWork = () => {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
+                        <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-800 mb-6">
                             Our Portfolio
                         </h2>
                         <div className="w-24 h-1 csts-bg-primary mx-auto rounded-full"></div>
@@ -215,41 +216,11 @@ const OurWork = () => {
                 </div>
             </section>
 
-            {/* Statistics Section */}
-            <section className="py-20 bg-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
-                            Our Impact by Numbers
-                        </h2>
-                        <div className="w-24 h-1 csts-bg-secondary mx-auto rounded-full"></div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                            <div className="text-4xl font-bold text-blue-600 mb-2">13+</div>
-                            <div className="text-gray-700 font-medium">Major Events Covered</div>
-                        </div>
-                        <div className="text-center p-6 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg">
-                            <div className="text-4xl font-bold text-teal-600 mb-2">6</div>
-                            <div className="text-gray-700 font-medium">Industry Sectors</div>
-                        </div>
-                        <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">
-                            <div className="text-4xl font-bold text-green-600 mb-2">5</div>
-                            <div className="text-gray-700 font-medium">Years Experience</div>
-                        </div>
-                        <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg">
-                            <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-                            <div className="text-gray-700 font-medium">Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Testimonial Section */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 ">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-8">
+                    <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-800 mb-8">
                         What Sets Us Apart
                     </h2>
                     
@@ -282,30 +253,49 @@ const OurWork = () => {
             </section>
 
             {/* Call to Action Section */}
-            <section className="py-20 bg-gradient-to-r from-pink-500 to-violet-500">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="font-heading text-3xl lg:text-4xl font-bold text-white mb-6">
-                        Ready to Add Your Event to Our Portfolio?
+
+            <section className="relative py-20 overflow-hidden">
+                {/* Video Background */}
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                >
+                    <source src={backgroundVideo} type="video/mp4" />
+                    Ready to Document Your Next Event?
+                </video>
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-900/10 to-violet-900/10 z-10"></div>
+
+                {/* Content */}
+                <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-3xl font-heading lg:text-4xl font-bold mb-6">
+                    Ready to Add Your Event to Our Portfolio?
                     </h2>
-                    <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                        Join the prestigious organizations that trust CSTS for their most important documentation needs.
+                    <p className="text-xl  mb-8 max-w-2xl mx-auto">
+                    Join the prestigious organizations that trust CSTS for their most important documentation needs.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link 
-                            to="/services" 
+                        <Link
+                            to="/our-work"
                             className="bg-white text-pink-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
                         >
-                            View Our Services
+                                                      View Our Services
+
                         </Link>
-                        <Link 
-                            to="/contact" 
-                            className="border-2 border-white text-white hover:bg-white hover:text-pink-600 font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
+                        <Link
+                            to="/contact"
+                            className="csts-btn-primary text-white hover:bg-white hover:text-pink-600 font-semibold px-8 py-4 rounded-lg transition-colors duration-200"
                         >
-                            REQUEST OUR SERVICE - Book Now!
+                           REQUEST OUR SERVICE - Book Now!
                         </Link>
                     </div>
                 </div>
             </section>
+            
         </div>
     );
 };

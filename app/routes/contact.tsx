@@ -82,15 +82,15 @@ const Contact = () => {
             <section className="py-20 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
+                        <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-800 mb-6">
                             Get In Touch
                         </h2>
                         <div className="w-24 h-1 csts-bg-primary mx-auto rounded-full"></div>
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-8 mb-16">
-                        <div className="text-center p-8 bg-gradient-to-br from-pink-50 to-pink-100 rounded-lg">
-                            <div className="w-16 h-16 csts-bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="text-center p-8 bg-gradient-to-br from-gray-100 to-white rounded-lg">
+                            <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Mail className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">Email Us</h3>
@@ -98,8 +98,8 @@ const Contact = () => {
                             <p className="text-gray-700">rapporteur@csts.com</p>
                         </div>
 
-                        <div className="text-center p-8 bg-gradient-to-br from-violet-50 to-violet-100 rounded-lg">
-                            <div className="w-16 h-16 csts-bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="text-center p-8 bg-gradient-to-br from-gray-100 to-white rounded-lg">
+                            <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Phone className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">Call Us</h3>
@@ -107,8 +107,8 @@ const Contact = () => {
                             <p className="text-gray-700">+233 (0) 987 654 321</p>
                         </div>
 
-                        <div className="text-center p-8 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-lg">
-                            <div className="w-16 h-16 csts-bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="text-center p-8 bg-gradient-to-br from-gray-100 to-white rounded-lg">
+                            <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Clock className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">Business Hours</h3>
@@ -123,7 +123,7 @@ const Contact = () => {
             <section className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
+                        <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-800 mb-6">
                             Book Our Services
                         </h2>
                         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -337,7 +337,7 @@ const Contact = () => {
 
                             <button
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-pink-500 to-violet-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-pink-600 hover:to-violet-600 transition-colors duration-200 flex items-center justify-center space-x-2"
+                                className="w-full bg-pink-500 text-white font-semibold py-4 px-8 rounded-lg hover:from-pink-600 hover:to-violet-600 transition-colors duration-200 flex items-center justify-center space-x-2"
                             >
                                 <Send className="w-5 h-5" />
                                 <span>Submit Request</span>
@@ -355,43 +355,48 @@ const Contact = () => {
             <section className="py-20 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
+                        <h2 className="text-3xl font-heading lg:text-4xl font-bold text-gray-800 mb-6">
                             What Happens Next?
                         </h2>
                         <div className="w-24 h-1 csts-bg-secondary mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="text-center">
-                            <div className="w-16 h-16 csts-bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                1
+                    <div className="relative">
+                        {/* Connection Line - Hidden on mobile, visible on lg screens */}
+                        <div className="hidden lg:block absolute top-8 left-1/4 right-1/4 h-0.5 bg-pink-300 z-0"></div>
+                        
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-pink-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold relative z-20">
+                                    1
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-3">Request Received</h3>
+                                <p className="text-gray-600 text-sm">We receive and review your service request within 24 hours.</p>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-3">Request Received</h3>
-                            <p className="text-gray-600 text-sm">We receive and review your service request within 24 hours.</p>
-                        </div>
 
-                        <div className="text-center">
-                            <div className="w-16 h-16 csts-bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                2
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-violet-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold relative z-20">
+                                    2
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-3">Consultation Call</h3>
+                                <p className="text-gray-600 text-sm">We schedule a consultation to understand your specific needs.</p>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-3">Consultation Call</h3>
-                            <p className="text-gray-600 text-sm">We schedule a consultation to understand your specific needs.</p>
-                        </div>
 
-                        <div className="text-center">
-                            <div className="w-16 h-16 csts-bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                3
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-cyan-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold relative z-20">
+                                    3
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-3">Proposal & Quote</h3>
+                                <p className="text-gray-600 text-sm">We provide a detailed proposal and competitive quote.</p>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-3">Proposal & Quote</h3>
-                            <p className="text-gray-600 text-sm">We provide a detailed proposal and competitive quote.</p>
-                        </div>
 
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-purple-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                                4
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-pink-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold relative z-20">
+                                    4
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-3">Service Delivery</h3>
+                                <p className="text-gray-600 text-sm">Professional rapporteur services delivered as agreed.</p>
                             </div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-3">Service Delivery</h3>
-                            <p className="text-gray-600 text-sm">Professional rapporteur services delivered as agreed.</p>
                         </div>
                     </div>
                 </div>

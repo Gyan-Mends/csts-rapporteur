@@ -4,6 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Sen:regular,500,600,700,800);
 
+
 @import "tailwindcss";
 @plugin './hero.ts';
 
@@ -102,7 +103,7 @@ html {
 
 /* CSTS Specific Styles */
 .csts-hero-bg {
-  background-image:  url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image:  url('./components/images/hero1.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -110,7 +111,7 @@ html {
 }
 
 .csts-hero-bg-2 {
-  background-image:  url('https://images.unsplash.com/photo-1559223607-b4d0555ae227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  background-image:  url('./components/images/hero2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

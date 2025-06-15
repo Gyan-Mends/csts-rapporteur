@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Users, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router";
+import logo from "~/components/images/CSTS Logo.png";
 
 const navigation = [
     { name: "Home", to: "/", isExternal: true },
@@ -20,7 +21,7 @@ export default function Navigation() {
             setMobileMenuOpen(false);
             return;
         }
-        
+
         e.preventDefault();
         const targetId = href.replace('#', '');
         const targetElement = document.getElementById(targetId);
@@ -37,12 +38,12 @@ export default function Navigation() {
         <header className="border border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 sticky top-0 z-50 transition-all duration-300 shadow-sm">
             <div className="container mx-auto px-4 py-4">
                 <div className="flex items-center justify-between">
-                    <Link 
-                        to="/" 
+                    <Link
+                        to="/"
                         className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
                     >
-                        <span className="text-xl font-bold text-gray-800">CSTS</span>
-                        <span className="text-sm text-gray-600">Rapporteur</span>
+                        <img src={logo} alt="CSTS" className=" h-10" />
+                        
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -53,39 +54,35 @@ export default function Navigation() {
                                 <Link
                                     key={item.name}
                                     to={item.to}
-                                    className={`font-medium transition-colors duration-200 relative group ${
-                                        isActive 
-                                            ? 'text-pink-500 csts-text-primary' 
+                                    className={`font-medium transition-colors duration-200 relative group ${isActive
+                                            ? 'text-pink-500 csts-text-primary'
                                             : 'text-gray-700 hover:text-pink-500'
-                                    }`}
+                                        }`}
                                 >
                                     {item.name}
-                                    <span className={`absolute bottom-0 left-0 h-0.5 csts-bg-primary transition-all duration-300 ${
-                                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                                    }`}></span>
+                                    <span className={`absolute bottom-0 left-0 h-0.5 csts-bg-primary transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                        }`}></span>
                                 </Link>
                             ) : (
                                 <a
                                     key={item.name}
                                     href={item.to}
-                                    className={`font-medium transition-colors duration-200 relative group ${
-                                        isActive 
-                                            ? 'text-pink-500 csts-text-primary' 
+                                    className={`font-medium transition-colors duration-200 relative group ${isActive
+                                            ? 'text-pink-500 csts-text-primary'
                                             : 'text-gray-700 hover:text-pink-500'
-                                    }`}
+                                        }`}
                                     onClick={(e) => handleSmoothScroll(e, item.to, item.isExternal)}
                                 >
                                     {item.name}
-                                    <span className={`absolute bottom-0 left-0 h-0.5 csts-bg-primary transition-all duration-300 ${
-                                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
-                                    }`}></span>
+                                    <span className={`absolute bottom-0 left-0 h-0.5 csts-bg-primary transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                                        }`}></span>
                                 </a>
                             );
                         })}
-                        
+
                         {/* CTA Button */}
-                        <Link 
-                            to="/contact" 
+                        <Link
+                            to="/contact"
                             className="csts-btn-primary font-heading px-6 py-2 text-sm"
                         >
                             Book Now
@@ -113,14 +110,13 @@ export default function Navigation() {
                             {navigation.map((item) => {
                                 const isActive = location.pathname === item.to;
                                 return item.isExternal ? (
-                                    <Link 
+                                    <Link
                                         key={item.name}
-                                        to={item.to} 
-                                        className={`font-medium transition-colors duration-200 py-2 ${
-                                            isActive 
-                                                ? 'text-pink-500 csts-text-primary font-semibold' 
+                                        to={item.to}
+                                        className={`font-medium transition-colors duration-200 py-2 ${isActive
+                                                ? 'text-pink-500 csts-text-primary font-semibold'
                                                 : 'text-gray-700 hover:text-pink-500'
-                                        }`}
+                                            }`}
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}
@@ -130,11 +126,10 @@ export default function Navigation() {
                                     <a
                                         key={item.name}
                                         href={item.to}
-                                        className={`font-medium transition-colors duration-200 py-2 ${
-                                            isActive 
-                                                ? 'text-pink-500 csts-text-primary font-semibold' 
+                                        className={`font-medium transition-colors duration-200 py-2 ${isActive
+                                                ? 'text-pink-500 csts-text-primary font-semibold'
                                                 : 'text-gray-700 hover:text-pink-500'
-                                        }`}
+                                            }`}
                                         onClick={(e) => handleSmoothScroll(e, item.to, item.isExternal)}
                                     >
                                         {item.name}
@@ -142,8 +137,8 @@ export default function Navigation() {
                                     </a>
                                 );
                             })}
-                            
-                           
+
+
                         </div>
                     </nav>
                 )}
