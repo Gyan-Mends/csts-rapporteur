@@ -14,6 +14,7 @@
     "@react-router/serve": "^7.5.3",
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "axios": "^1.10.0",
     "isbot": "^5.1.27",
     "lucide-react": "^0.511.0",
     "nodemailer": "^6.9.8",

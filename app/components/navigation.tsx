@@ -8,6 +8,7 @@ const navigation = [
     { name: "Why Rapporteurs?", to: "/why-rapporteurs", isExternal: true },
     { name: "Our Services", to: "/services", isExternal: true },
     { name: "Our Work", to: "/our-work", isExternal: true },
+    { name: "Reports", to: "/reports", isExternal: true },
     { name: "Contact", to: "/contact", isExternal: true },
 ];
 

@@ -6,7 +6,13 @@ export default [
         route("/why-rapporteurs", "routes/why-rapporteurs.tsx"),
         route("/services", "routes/services.tsx"),
         route("/our-work", "routes/our-work.tsx"),
+        route("/reports", "routes/report/index.tsx"),
+        route("/reports/:id", "routes/report/$id.tsx"),
         route("/contact", "routes/contact.tsx"),
     ]),
+    
+    // API Routes
+    route("/api/reports", "routes/api/reports.tsx"),
+    route("/api/reports/:id", "routes/api/reports.$id.tsx"),
 
 ] satisfies RouteConfig;
