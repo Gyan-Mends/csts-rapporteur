@@ -227,7 +227,7 @@ export default function Reports() {
           {/* Reports Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredReports.map((report) => (
-              <div key={report._id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border overflow-hidden">
+              <div key={report._id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-black/20 overflow-hidden">
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -278,13 +278,7 @@ export default function Reports() {
                   )}
                   
                   <div className="flex gap-2">
-                    <Link
-                      to={`/reports/${id}`}
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 border border-pink-500 text-pink-500 rounded-lg hover:bg-pink-50 transition-colors"
-                    >
-                      <FileText className="w-4 h-4" />
-                      Details
-                    </Link>
+                   
                     {report.fileUrl ? (
                       <>
                   
