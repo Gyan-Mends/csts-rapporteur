@@ -60,7 +60,7 @@ export default function Reports() {
     const fetchReports = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5173/api/reports');
+        const response = await axios.get('https://cstsgh.vercel.app/api/reports');
         
         if (response.data.success) {
           setReports(response.data.data.filter((report: Report) => report.isPublished));
