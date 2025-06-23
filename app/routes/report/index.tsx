@@ -85,18 +85,7 @@ export default function Reports() {
     return matchesCategory && matchesSearch;
   });
 
-  const handleViewReport = (fileUrl: string) => {
-    window.open(fileUrl, '_blank');
-  };
-
-  const handleDownloadReport = (fileUrl: string, filename: string) => {
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // Removed download handlers - download functionality moved to detail page
 
   if (loading) {
     return (
@@ -278,25 +267,13 @@ export default function Reports() {
                   )}
                   
                   <div className="flex gap-2">
-                   
-                    {report.fileUrl ? (
-                      <>
-                  
-                        {report.filename && (
-                          <button
-                            onClick={() => handleDownloadReport(report.fileUrl!, report.filename!)}
-                            className="flex-1 csts-btn-primary flex items-center justify-center gap-2 py-2 text-sm"
-                          >
-                            <Download className="w-4 h-4" />
-                            Download
-                          </button>
-                        )}
-                      </>
-                    ) : (
-                      <div className="flex-1 text-center py-2 text-sm text-gray-500 bg-gray-50 rounded-lg">
-                        Document not available
-                      </div>
-                    )}
+                    <Link 
+                      to={`/reports/${report._id}`}
+                      className="flex-1 csts-btn-primary flex items-center justify-center gap-2 py-2 text-sm text-white hover:bg-pink-700 transition-colors"
+                    >
+                      <Eye className="w-4 h-4" />
+                      View Report
+                    </Link>
                   </div>
                 </div>
               </div>
