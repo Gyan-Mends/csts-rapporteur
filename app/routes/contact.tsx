@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import { type MetaFunction } from 'react-router';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import logo from '~/components/images/logo.jpg';
 
 export const meta: MetaFunction = () => {
     return [
         { title: "Contact & Book Now - CSTS Rapporteur Services" },
         { name: "description", content: "Contact CSTS to book professional rapporteur services for your meetings, conferences, and events. Get a quote for virtual and in-person documentation services." },
         { name: "keywords", content: "contact CSTS, book rapporteur services, meeting documentation quote, professional reporting services" },
+        { name: "og:image", content: logo },
+        { name: "og:title", content: "CSTS - Professional Rapporteur Services" },
+        { name: "og:description", content: "Corporate Secretarial and Training Services Limited offers exceptional rapporteur services with flexibility, impartiality and credible analytical skills for your formal events." },
+        { name: "og:url", content: "https://csts.com.gh" },
+        { name: "og:type", content: "website" },
+        { name: "og:locale", content: "en_US" },
+        { name: "og:site_name", content: "CSTS" },
+        
     ];
 };
 

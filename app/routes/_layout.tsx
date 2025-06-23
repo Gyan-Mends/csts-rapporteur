@@ -3,6 +3,32 @@ import Navigation from "~/components/navigation";
 import { Link } from "react-router";
 import { Mail, Phone, MapPin, FileText, Users, Shield, Facebook, X, Instagram, Linkedin, Youtube } from "lucide-react";
 import logo from "~/components/images/CSTS Logo.png";
+import logo2 from "~/components/images/logo.jpg";
+
+const meta = {
+    title: "CSTS - Professional Rapporteur Services",
+    description: "Corporate Secretarial and Training Services Limited offers exceptional rapporteur services with flexibility, impartiality and credible analytical skills for your formal events.",
+    keywords: "rapporteur, meeting documentation, corporate secretarial, training services, CSTS, professional reporting",
+    image: logo2,
+    url: "https://csts.com.gh",
+    type: "website",
+    locale: "en_US",
+    site_name: "CSTS",
+    author: "CSTS",
+    robots: "index, follow",
+    viewport: "width=device-width, initial-scale=1.0",
+    og: {
+        image: logo2,
+        title: "CSTS - Professional Rapporteur Services",
+        description: "Corporate Secretarial and Training Services Limited offers exceptional rapporteur services with flexibility, impartiality and credible analytical skills for your formal events.",
+        url: "https://csts.com.gh",
+        type: "website",
+        locale: "en_US",
+        site_name: "CSTS",
+        author: "CSTS",
+        robots: "index, follow",
+    }
+}
 
 export default function AppLayout() {
     return (

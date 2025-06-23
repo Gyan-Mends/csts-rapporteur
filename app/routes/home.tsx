@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, type MetaFunction } from 'react-router';
 import { CheckCircle, FileText, Users, Clock, Globe, Shield } from 'lucide-react';
 import backgroundVideo from '~/components/images/large1.mp4';
+import logo from '~/components/images/logo.jpg';
 
 export const meta: MetaFunction = () => {
     return [
@@ -11,7 +12,7 @@ export const meta: MetaFunction = () => {
         { name: "author", content: "CSTS" },
         { name: "robots", content: "index, follow" },
         { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-        { name: "og:image", content: "https://csts.com.gh/images/csts-logo.png" },
+        { name: "og:image", content: logo },
         { name: "og:title", content: "CSTS - Professional Rapporteur Services" },
         { name: "og:description", content: "Corporate Secretarial and Training Services Limited offers exceptional rapporteur services with flexibility, impartiality and credible analytical skills for your formal events." },
         { name: "og:url", content: "https://csts.com.gh" },
